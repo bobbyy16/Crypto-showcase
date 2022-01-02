@@ -1,0 +1,265 @@
+/* Top Portion */
+.hide {
+    display: none;
+}
+
+.jumbotron {
+    background-image: url("../imgs/bg1.jpg");
+    height: 450px;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+
+.jumbotron-other-pages {
+    background-image: url("../imgs/bg1.jpg");
+    height: 300px;
+    background-position: center bottom;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    height: 40px;
+    background-color: #1cbac8;
+    text-align: right;
+    position: static;
+}
+
+.fab {
+    color: white;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+  }
+
+  .social-padding {
+    padding: 5px;
+  }
+
+  /* .navigation {
+    position: sticky;
+    top: 0px;
+  } */
+
+  .quote {
+    font-size: 1rem;
+    text-align: center;
+    /* position: absolute; */
+    background-color: white !important; 
+    width: 50%; 
+    padding: 25px;
+    padding-bottom: 25px;
+    top: 50%;
+    left: 25%;
+    margin: auto;
+    opacity: 0.8;
+    display: block;
+    overflow: auto;
+  }
+
+  .image-quote {
+    position: relative;
+    z-index: -1;
+  }
+
+  /* the line under pricing */
+  .wpm-border {
+    width: 90px;
+    height: 2px;
+    background: #1CBAC8;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+.navbar-toggler-icon {
+    margin-left: 0;
+}
+  /* body */
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#chartContainer {
+    height: 370px;
+    width: 100%;
+}
+
+span {
+    margin-left: 35px;
+}
+
+.coin-icon {
+    width: 20px;
+}
+
+.coin-image {
+    width: 20px;
+    height: 20px;
+}
+
+.pricing {
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+h5 {
+    text-align: center;
+}
+
+.data {
+    padding: 10px;
+    border-bottom:1px solid #eff0f1;
+}
+
+/* .card {
+    z-index: -1;
+} */
+
+.card-body {
+    overflow: auto;
+}
+
+.strong-question {
+    font-weight: bold;
+}
+
+.video {
+    z-index: 1;
+}
+
+.dollar-image-div {
+    text-align: center;
+}
+
+.dollar-image {
+    width: 85%;
+}
+
+#loginSpot {
+    margin-bottom: 30px;
+}
+
+/* Youtube Video */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+    text-align: center;
+    }
+    
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    }
+
+article {
+    /* margin-left: 170px;  */
+    padding: 1em;
+    overflow: hidden;
+    }
+
+/* .newsDivider {
+    border-left: 1px solid gray;
+    } */
+    
+.one {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+.thumb1 { 
+    background: url(blah.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
+    width: 250px;
+    height: 250px;
+  }
+
+  .divider2 {
+    border-bottom: 1px solid slategray;
+    margin-bottom: 40px;
+  }
+
+/* Footer */
+.footer {
+    text-align: center;
+    height: 60px;
+    background-color: slategray;
+    color: white;
+    padding: 18px;
+    font-size: 14px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .separator {
+        display: none;
+    }
+
+    .logo {
+        width: 245px;
+    }
+
+    .quote {
+        width: 58%; 
+        padding: 25px;
+        top: 12%;
+      }
+
+      .tbody {
+        overflow: scroll;
+    }
+
+    .pricing {
+        padding-bottom: 0px;
+    }
+
+    .navigation {
+        position: static;
+      }
+
+    .card {
+        z-index: 1;
+    }
+
+    .card-body {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+
+
+}
+
+@media (min-width: 576px) {
+    .jumbotron {
+        padding: 9rem 2rem;
+    }
+}
+
+::selection{
+    background-color: #1CBAC8;
+    color: white;
+}

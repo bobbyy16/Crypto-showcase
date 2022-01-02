@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Crypto </title>
+  <!-- Airbrake-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/airbrake-js/1.0.7/client.min.js"></script>
+  <!-- Add Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+    integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <!-- Add CSS-->
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+  <!-- Add JQ-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--Jquery Chart -->
+  <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+  <!-- Chart.Js-->
+  <script>"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"</script>
+  <script>"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid social-icons">
+    <!--Social Icons -->
+    <div class="social-padding">
+      <a href="https://www.facebook.com/search/top/?q=cryptocurrency"><i class="fab fa-facebook-f circle"></i></a>
+      <a href="https://twitter.com/search?q=cryptocurrency&src=typd"><i class="fab fa-twitter circle"></i></a>
+      <a href="https://www.youtube.com/results?search_query=cryptocurrency"><i class="fab fa-youtube circle"></i></a>
+    </div>
+  </div>
+
+  <div class="container-fluid navigation">
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+      <div class="navbar-header">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#"><img src="assets/imgs/title.jpg" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <!-- Navigtion Links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="divider">
+            <a class="nav-link separator">|</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="divider">
+            <a class="nav-link separator">|</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="FAQ.html">FAQ</a>
+          </li>
+          <!-- <li class="divider">
+            <a class="nav-link ">|</a>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="privacy.html">Privacy</a>
+          </li> -->
+          <li id="dividerSection">
+            <a class="nav-link separator">|</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-default hide" id="logOutBtn" href="#">Log Out</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-default hide" id="callLogIn" href="#">Log In</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- Firebase Login -->
+  <div class="container firebase-login">
+    <div id="loginSpot" class="hide">
+      <br>
+      <form>
+        <div class="form-group">
+          <p>Login to save your favorite cryptocurrencies.</p>
+          <label for="exampleInputEmail1">Email Address:</label>
+          <input type="email" class="form-control" id="emailAddress" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password:</label>
+          <input type="password" class="form-control" id="userPW" placeholder="Password">
+        </div>
+        <button type="button" class="btn btn-default hide" id="signInBtn">Sign In</button>
+        <button type="button" class="btn btn-default hide" id="signUpBtn">Sign Up</button>
+    </div>
+
+    </form>
+  </div>
+  </div>
+  <!-- Bootstrap Jumbotron with Scrolling Quotes -->
+  <div class="jumbotron jumbotron-fluid image-quote">
+    <div class="container container-flex">
+      <div id="demo" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p class="quote clear">“Bitcoin is a very exciting development, it might lead to a world currency. I think
+              over the next decade it will grow to become one of the most important ways to pay for things and transfer
+              assets.” <br>- Kim Dotcom</p>
+          </div>
+          <div class="carousel-item">
+            <p class="quote clear">“The blockchain keeps everyone honest, and a whole layer of banking bureaucracy is
+              removed, lowering costs.” <br>- Paul Vigna</p>
+          </div>
+          <div class="carousel-item">
+            <p class="quote clear">“The reason we're all here is that the current ﬁnancial system is outdated.” <br>-
+              Charlie Shrem</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Favorites Container -->
+  <div class="container favorite" id="favSection">
+    <div class="card">
+      <div class="card-header">
+        <h5>FAVORITES</h5>
+        <div class="wpm-border"></div>
+      </div>
+      <div class="card-body">
+        <table class="table" id="coin-favorites">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Symbol</th>
+              <th scope="col">Price</th>
+              <th scope="col">Market Cap</th>
+              <th scope="col">High Today</th>
+              <th scope="col">Low Today</th>
+            </tr>
+          </thead>
+          <!-- <tbody> -->
+          <!-- Insert crypto currency favorite rows here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Crypt Currency Pricing Container -->
+  <div class="container pricing">
+    <div class="card">
+      <div class="card-header">
+        <h5>PRICING</h5>
+        <div class="wpm-border"></div>
+      </div>
+      <div class="card-body">
+        <table class="table" id="displayTable">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Symbol</th>
+              <th scope="col">Price</th>
+              <th scope="col">Market Cap</th>
+              <th scope="col">High Today</th>
+              <th scope="col">Low Today</th>
+              <th scope="col">Chart</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Insert crypto currency rows here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Crypto Currency News Container - from RSS -->
+  <div class="container news">
+    <div class="card">
+      <div class="card-header">
+        <h5>CRYPTO CURRENCY NEWS</h5>
+        <div class="wpm-border"></div>
+      </div>
+      <div class="card-body">
+        <div class="container">
+          <!-- <article class = "newsImage one thumb1">
+          </article>
+           -->
+          <article class="newsDivider">
+            <!-- <h3 class = "newsTitle"></h3>
+            <p class = "newsArticle"></p>
+            <p class= "newsLink"></p> -->
+          </article>
+
+          <!-- <iframe src="https://feed.mikle.com/widget/v2/77295/" height="452px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer container-fluid">
+      &copy; 2021 | Crypto Cronies | Created using HTML, CSS, Bootstrap, JS
+    </div>
+
+    <!-- <canvas id="myChart"></canvas> -->
+
+    <script type="text/javascript" src="assets/js/logic.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/cryptoapp.js"></script> -->
+</body>
